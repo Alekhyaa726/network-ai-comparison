@@ -1,0 +1,77 @@
+{
+  "simulation_config": {
+    "max_simulation_time": 3600,
+    "update_interval": 1.0,
+    "fault_injection_interval": 30,
+    "auto_fault_probability": 0.1,
+    "healing_timeout": 60
+  },
+  "network_config": {
+    "base_capacity": 45,
+    "base_delay": 10,
+    "congestion_threshold": 0.8,
+    "failure_threshold": 0.95,
+    "recovery_threshold": 0.9
+  },
+  "ai_models": {
+    "rule_based": {
+      "enabled": true,
+      "decision_time": 0.5,
+      "confidence_threshold": 0.8
+    },
+    "regression": {
+      "enabled": true,
+      "model_type": "random_forest",
+      "retrain_interval": 100,
+      "prediction_window": 10
+    },
+    "reinforcement_learning": {
+      "enabled": true,
+      "algorithm": "dqn",
+      "epsilon": 0.1,
+      "learning_rate": 0.001,
+      "memory_size": 10000,
+      "batch_size": 32,
+      "update_frequency": 4
+    }
+  },
+  "fault_types": {
+    "node_down": {
+      "probability": 0.3,
+      "recovery_time_range": [10, 60],
+      "impact_radius": 1
+    },
+    "link_down": {
+      "probability": 0.4,
+      "recovery_time_range": [5, 30],
+      "impact_radius": 0
+    },
+    "congestion": {
+      "probability": 0.2,
+      "recovery_time_range": [3, 20],
+      "impact_radius": 2
+    },
+    "packet_loss": {
+      "probability": 0.08,
+      "recovery_time_range": [1, 10],
+      "impact_radius": 0
+    },
+    "cascading": {
+      "probability": 0.02,
+      "recovery_time_range": [30, 120],
+      "impact_radius": 3
+    }
+  },
+  "performance_metrics": {
+    "kpis": [
+      "healing_time",
+      "recovery_accuracy",
+      "network_throughput",
+      "path_optimization",
+      "resource_utilization",
+      "decision_consistency"
+    ],
+    "collection_interval": 5,
+    "aggregation_window": 60
+  }
+}

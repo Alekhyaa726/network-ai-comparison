@@ -1,0 +1,48 @@
+{
+  "name": "NSFNET",
+  "description": "National Science Foundation Network topology with 14 nodes",
+  "nodes": [
+    {"id": 0, "name": "Seattle", "x": 50, "y": 100, "type": "backbone"},
+    {"id": 1, "name": "Palo Alto", "x": 50, "y": 200, "type": "backbone"},
+    {"id": 2, "name": "Salt Lake City", "x": 150, "y": 120, "type": "backbone"},
+    {"id": 3, "name": "Boulder", "x": 200, "y": 150, "type": "backbone"},
+    {"id": 4, "name": "Lincoln", "x": 250, "y": 170, "type": "backbone"},
+    {"id": 5, "name": "Houston", "x": 230, "y": 250, "type": "backbone"},
+    {"id": 6, "name": "Atlanta", "x": 350, "y": 220, "type": "backbone"},
+    {"id": 7, "name": "Pittsburgh", "x": 380, "y": 150, "type": "backbone"},
+    {"id": 8, "name": "Ithaca", "x": 400, "y": 120, "type": "backbone"},
+    {"id": 9, "name": "Princeton", "x": 420, "y": 140, "type": "backbone"},
+    {"id": 10, "name": "Cambridge", "x": 450, "y": 100, "type": "backbone"},
+    {"id": 11, "name": "Ann Arbor", "x": 330, "y": 120, "type": "backbone"},
+    {"id": 12, "name": "Champaign", "x": 300, "y": 160, "type": "backbone"},
+    {"id": 13, "name": "San Diego", "x": 70, "y": 270, "type": "backbone"}
+  ],
+  "links": [
+    {"source": 0, "target": 1, "capacity": 45, "delay": 20, "cost": 1},
+    {"source": 0, "target": 2, "capacity": 45, "delay": 25, "cost": 1},
+    {"source": 1, "target": 2, "capacity": 45, "delay": 30, "cost": 1},
+    {"source": 1, "target": 13, "capacity": 45, "delay": 15, "cost": 1},
+    {"source": 2, "target": 3, "capacity": 45, "delay": 18, "cost": 1},
+    {"source": 3, "target": 4, "capacity": 45, "delay": 22, "cost": 1},
+    {"source": 3, "target": 5, "capacity": 45, "delay": 35, "cost": 1},
+    {"source": 3, "target": 11, "capacity": 45, "delay": 28, "cost": 1},
+    {"source": 4, "target": 5, "capacity": 45, "delay": 40, "cost": 1},
+    {"source": 4, "target": 12, "capacity": 45, "delay": 25, "cost": 1},
+    {"source": 5, "target": 6, "capacity": 45, "delay": 30, "cost": 1},
+    {"source": 6, "target": 7, "capacity": 45, "delay": 35, "cost": 1},
+    {"source": 7, "target": 8, "capacity": 45, "delay": 20, "cost": 1},
+    {"source": 7, "target": 11, "capacity": 45, "delay": 15, "cost": 1},
+    {"source": 8, "target": 9, "capacity": 45, "delay": 12, "cost": 1},
+    {"source": 8, "target": 10, "capacity": 45, "delay": 18, "cost": 1},
+    {"source": 9, "target": 10, "capacity": 45, "delay": 10, "cost": 1},
+    {"source": 11, "target": 12, "capacity": 45, "delay": 20, "cost": 1}
+  ],
+  "metadata": {
+    "total_nodes": 14,
+    "total_links": 18,
+    "network_type": "backbone",
+    "technology": "fiber_optic",
+    "max_capacity": 45,
+    "coordinate_system": "relative"
+  }
+}
